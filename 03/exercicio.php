@@ -39,4 +39,3 @@ echo "Número de elementos no array de dias da semana é : " . count($diasdasema
 #6
 echo "A posição de sabado é : " . array_search("sabado", $diasdasemana) . "<br>";
 ?>
-tem menu de contexto
