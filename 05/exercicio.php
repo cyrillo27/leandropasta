@@ -237,18 +237,26 @@ if ($A + $B == $C) {
     echo "A soma de A ($A) e B ($B) não é igual a C ($C)";
 }
 echo "<br>";
-
+// exercicio 2 Calcular o quadrado de um número
     
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-       
-        $numero = $_POST['numero'];
-        
-      
-        $quadrado = $numero * $numero;
 
-       
-        echo "<h3>O quadrado de $numero é: $quadrado</h3>";
-    }
-    ?>
+$numero = 8;
+$quadrado = $numero * $numero;
+
+echo "O quadrado de $numero é: $quadrado";
+
+echo "<br>";        
+// exercicio 3 Verificar se um número é par ou ímpar//
+
+$numero = 14;
+
+
+if ($numero % 2 == 0) {
+    echo "O número $numero é par.";
+} else {
+    echo "O número $numero é ímpar.";
+}
+
+
 
 ?>
