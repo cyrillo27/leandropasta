@@ -256,7 +256,18 @@ if ($numero % 2 == 0) {
 } else {
     echo "O número $numero é ímpar.";
 }
+echo "<br>";  
+// exercicio 4 
+$numero1 = 10;
+$numero2 = 15;
+$numero3 = 20;
 
+    
+    $media = ($numero1 + $numero2 + $numero3) / 3;
 
+   
+    echo "A média dos números $numero1, $numero2 e $numero3 é: $media";
+
+echo "<br>";
 
 ?>
