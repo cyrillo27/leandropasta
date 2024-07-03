@@ -13,5 +13,13 @@ class Usuario {
         $this->ddd = $ddd;
         $this->email = $email;
     }
+
+    public function getTelefoneCompleto() {
+        return $ddd . $telefone;
+    }
+
+    public function separaNome() {
+        
+    }
 }
 ?>

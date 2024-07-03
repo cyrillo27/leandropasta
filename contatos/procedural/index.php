@@ -1,6 +1,9 @@
 <?php
-require_once 'database.php';
-require_once 'usuario.php';
 
-$bancoDeDados = new Database();
+require_once 'usuarioDAO.php';
+
+$usuarioDAO = new UsuarioDAO();
+$usuarios = $usuarioDAO->getContatos();
+
+print_r($usuarios);
 ?>
