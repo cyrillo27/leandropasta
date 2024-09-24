@@ -1,5 +1,5 @@
 <?php
-require_once 'models/DatabaseRepository.php';
+require(__DIR__ . '/models/DatabaseRepository.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['delete_id'])) {
