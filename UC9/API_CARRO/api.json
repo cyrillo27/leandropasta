@@ -1,0 +1,116 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "model": "Honda Civic",
+      "manufacturer": "Honda",
+      "year": 2020,
+      "type": "Sedan",
+      "height": "1.42 m",
+      "weight": "1250 kg",
+      "horsepower": 158,
+      "weaknesses": [
+        "Consumo elevado de combustível",
+        "Espaço no porta-malas"
+      ]
+    },
+    {
+      "id": 2,
+      "model": "Toyota Corolla",
+      "manufacturer": "Toyota",
+      "year": 2021,
+      "type": "Sedan",
+      "height": "1.45 m",
+      "weight": "1300 kg",
+      "horsepower": 169,
+      "weaknesses": [
+        "Manuseio menos ágil"
+       
+      ]
+    },
+    {
+      "id": 3,
+      "model": "Ford Mustang",
+      "manufacturer": "Ford",
+      "year": 2022,
+      "type": "Coupe",
+      "height": "1.38 m",
+      "weight": "1650 kg",
+      "horsepower": 450,
+      "weaknesses": [
+        "Caro",
+        "Não ideal para dirigir na cidadee"
+      ]
+    },
+    {
+      "id": 4,
+      "model": "Chevrolet Tracker",
+      "manufacturer": "Chevrolet",
+      "year": 2023,
+      "type": "SUV",
+      "height": "1.65 m",
+      "weight": "1350 kg",
+      "horsepower": 170,
+      "weaknesses": [
+        "Consumo elevado de combustível",
+        "Espaço interno limitado"
+      ]
+    },
+    {
+      "id": 5,
+      "model": "Nissan Kicks",
+      "manufacturer": "Nissan",
+      "year": 2023,
+      "type": "SUV",
+      "height": "1.56 m",
+      "weight": "1250 kg",
+      "horsepower": 114,
+      "weaknesses": [
+        "Desempenho em subidas",
+        "Menos potente em estradas"
+      ]
+    },
+    {
+      "id": 6,
+      "model": "Volkswagen Gol",
+      "manufacturer": "Volkswagen",
+      "year": 2022,
+      "type": "Hatch",
+      "height": "1.46 m",
+      "weight": "1000 kg",
+      "horsepower": 128,
+      "weaknesses": [
+        "Espaço no porta-malas",
+        "Desempenho em alta velocidade"
+      ]
+    },
+    {
+      "id": 7,
+      "model": "Fiat Argo",
+      "manufacturer": "Fiat",
+      "year": 2022,
+      "type": "Hatch",
+      "height": "1.48 m",
+      "weight": "1100 kg",
+      "horsepower": 130,
+      "weaknesses": [
+        "Acabamento interno",
+        "Consumo de combustível"
+      ]
+    },
+    {
+      "id": 8,
+      "model": "Honda HR-V",
+      "manufacturer": "Honda",
+      "year": 2023,
+      "type": "SUV",
+      "height": "1.60 m",
+      "weight": "1400 kg",
+      "horsepower": 150,
+      "weaknesses": [
+        "Preço elevado",
+        "Ruído interno em alta velocidade"
+      ]
+    }
+  ]
+}
