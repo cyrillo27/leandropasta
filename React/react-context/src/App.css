@@ -1,0 +1,13 @@
+.mr-2 {
+  margin-right: 2em;
+} 
+
+.mb-1 {
+  margin-bottom: 1em;
+} 
+
+.flex {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
