@@ -1,51 +1,18 @@
-.onboard-screens {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background: #FFF;
-}
-
 .onboard-page {
     display: flex;
     height: 100%;
     width: 100%;
     flex-direction: column;
-    background: #FFF;
-    position: absolute;    
-    left: 0;
-    top: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-.onboard-page.active {
-
-}
-
-.onboard-page:not(.active) {
-    transform: translate(100%, 0);
+    background: #000;
 }
 
 .onboard-page .header {
     flex: 1 0 50%;
-    background: #8257E5;
-    /*background: #04D361;*/
+    background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 10em;
-}
-
-.onboard-page .header ion-icon {
-    position: absolute;
-}
-
-.onboard-page .header img{
-    width: 70%;
-    height: auto;   
-}
-
-.onboard-page.second .header{
-    background: #04D361;
 }
 
 .body-content {
@@ -55,13 +22,13 @@
 }
 
 .body-content .number {
-    color: #6A6180;
+    color: #ffffff;
     font-size: 4em;
     opacity: 0.3;
 }
 
 .body-content .desc {
-    color: #6A6180;
+    color: #ffffff;
     font-size: 2em;
 }
 
@@ -86,12 +53,8 @@
     margin-right: 10px;
 }
 
-.onboard-page.second .control ul.dots li.active {
-    background: #04D361;
-}
-
 .control ul.dots li.active {
-    background: #8257E5;
+    background: #fdfdfd;
 }
 
 .control .arrow{
