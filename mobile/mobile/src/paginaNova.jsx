@@ -1,9 +1,14 @@
-function paginaNova() {
+const func = function () {
+
+}
+
+function PaginaNova({numero, comando}) {
     return (
         <>
-            <h2>ok!</h2>
+            <h1>{ numero + numero}</h1>
+            <h2 onClick={comando}>Minha página</h2>
         </>
-    );
+    )
 }
- 
-export default paginaNova;
+
+export default PaginaNova;
