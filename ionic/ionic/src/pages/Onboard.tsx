@@ -15,6 +15,7 @@ const Home = () => {
 
       {}
       <IonContent fullscreen>
+      <div className="background"></div> {}
         <div className="dropdown-container">
           <label htmlFor="pagode-options" className="dropdown-label">CDs de Pagode</label>
           <select id="pagode-options" className="dropdown">
@@ -22,6 +23,7 @@ const Home = () => {
             <option value="exaltasamba">Exaltasamba ao Vivo</option>
             <option value="revelacao">Revelação 2003</option>
             <option value="sensacao">Sensação ao Vivo</option>
+            <option value="Raça negra">Raça negra ao vivo</option>
           </select>
         </div>
       </IonContent>
