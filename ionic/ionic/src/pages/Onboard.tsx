@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonIcon } from '@ionic/react';
 import { homeOutline, libraryOutline } from 'ionicons/icons';
-import './Home.css';
+import './Onboard.css';
 
 const Home = () => {
   return (

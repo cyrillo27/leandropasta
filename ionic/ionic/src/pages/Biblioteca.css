@@ -1,0 +1,15 @@
+
+.biblioteca-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .biblioteca-title {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .biblioteca-item {
+    margin: 10px 0;
+  }
+  
