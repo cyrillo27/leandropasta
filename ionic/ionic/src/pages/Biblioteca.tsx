@@ -17,10 +17,10 @@ import {
     return (
       <IonPage>
         <IonHeader>
-          <IonToolbar>
-            <IonTitle className="header-title">Biblioteca</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+//           <IonToolbar>
+//             <IonTitle className="header-title">Biblioteca</IonTitle>
+//           </IonToolbar>
+//         </IonHeader>
   
         <IonContent fullscreen>
           <h2>Bem-vindo à Biblioteca de Pagode</h2>
