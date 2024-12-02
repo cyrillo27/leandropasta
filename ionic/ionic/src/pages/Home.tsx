@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   IonContent,
   IonFooter,
@@ -8,11 +9,12 @@ import {
   IonToolbar,
 } from '@ionic/react';
 import { homeOutline, libraryOutline } from 'ionicons/icons';
-import { useHistory } from 'react-router-dom'; // Para navegação
+import { useHistory } from 'react-router-dom'; 
 import './Home.css';
 
 const Home: React.FC = () => {
   const history = useHistory();
+  const [selectedCd, setSelectedCd] = useState('');
 
   return (
     <IonPage>
@@ -27,25 +29,40 @@ const Home: React.FC = () => {
           <label htmlFor="pagode-options" className="dropdown-label">
             CDs de Pagode
           </label>
-          <select id="pagode-options" className="dropdown">
+          <select
+            id="pagode-options"
+            className="dropdown"
+            value={selectedCd}
+            onChange={(e) => setSelectedCd(e.target.value)}
+          >
+            <option value="">Selecione um CD</option>
             <option value="pixote">Pixote 15 Anos</option>
             <option value="exaltasamba">Exaltasamba ao Vivo</option>
             <option value="revelacao">Revelação 2003</option>
             <option value="sensacao">Sensação ao Vivo</option>
           </select>
+          {selectedCd && <p>Você selecionou: {selectedCd}</p>}
         </div>
       </IonContent>
 
       <IonFooter>
         <div className="footer">
-          <div className="footer-item" onClick={() => history.push('/home')}>
+          <button
+            className="footer-item"
+            onClick={() => history.push('/home')}
+            aria-label="Ir para Início"
+          >
             <IonIcon icon={homeOutline} />
             <p>Início</p>
-          </div>
-          <div className="footer-item" onClick={() => history.push('/biblioteca')}>
+          </button>
+          <button
+            className="footer-item"
+            onClick={() => history.push('/biblioteca')}
+            aria-label="Ir para Biblioteca"
+          >
             <IonIcon icon={libraryOutline} />
             <p>Biblioteca</p>
-          </div>
+          </button>
         </div>
       </IonFooter>
     </IonPage>

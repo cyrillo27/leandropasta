@@ -1,11 +1,18 @@
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
 .background {
-  position: absolute;
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../assets/images/pagode-background.jpg'); 
+  background-image: url('../assets/images/pagode-background.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -18,6 +25,7 @@
   background-color: #ffffff;
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  flex-wrap: wrap; 
 }
 
 .search-icon {
@@ -34,6 +42,12 @@
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #f5f5f5;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -50,6 +64,7 @@
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .title {
@@ -65,13 +80,30 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
+  transition: border 0.3s ease;
 }
+
+.input-field:focus {
+  border: 2px solid #555;
+}
+
 
 .login-button {
   --background: #000000;
   --color: #ffffff;
   font-size: 1rem;
   width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
 }
 
 
@@ -82,8 +114,8 @@
   background-color: #000000;
   color: #ffffff;
   padding: 10px 0;
+  flex-wrap: wrap; 
 }
-
 .footer-item {
   display: flex;
   flex-direction: column;
@@ -94,4 +126,33 @@
 .footer-item ion-icon {
   font-size: 1.5rem;
   margin-bottom: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-item:hover ion-icon {
+  transform: scale(1.2);
+  color: #f39c12;
+}
+
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .login-container {
+    margin-top: 10%;
+    padding: 15px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .footer-item {
+    margin-bottom: 10px;
+  }
 }

@@ -1,75 +1,99 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    
-  }
-  
-  .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/background-image/imagens/22555.jpg'); 
-    background-size: cover; 
-    background-position: center;
-    z-index: -1;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/background-image/imagens/22555.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0;
+  color: #ffffff;
+  background-color: #000000;
+  letter-spacing: 1px;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 140px);
+}
+
+.dropdown-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  max-width: 400px;
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #0e0000;
+  border-radius: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.footer-item ion-icon {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-item:hover ion-icon {
+  transform: scale(1.2);
+  color: #f39c12;
+}
+
+@media (max-width: 768px) {
   .header-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px 0;
-    color: #ffffff;
-    background-color: #000000;
-  }
-  
-  
-  .dropdown-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 140px);  
-  
-  }
-  
-  .dropdown-label {
     font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .dropdown {
-    width: 80%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 2px solid #0e0000;
-    border-radius: 10px;
-  }
-  
-  
-  .footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #000000;
-    color: #ffffff;
     padding: 10px 0;
   }
-  
-  .footer-item {
-    display: flex;
+
+  .dropdown-container {
+    padding: 20px;
+  }
+
+  .footer {
     flex-direction: column;
-    align-items: center;
-    font-size: 0.9rem;
+    padding: 20px 0;
   }
-  
-  .footer-item ion-icon {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+
+  .footer-item {
+    margin-bottom: 10px;
   }
-  
+}
