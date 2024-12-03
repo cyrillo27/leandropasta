@@ -1,46 +1,40 @@
-import {
-    IonContent,
-    IonFooter,
-    IonHeader,
-    IonIcon,
-    IonPage,
-    IonTitle,
-    IonToolbar,
-  } from '@ionic/react';
-  import { homeOutline, libraryOutline } from 'ionicons/icons';
-  import { useHistory } from 'react-router-dom';
-  import './Biblioteca.css';
-  
-  const Biblioteca: React.FC = () => {
-    const history = useHistory();
-  
-    return (
-      <IonPage>
-        <IonHeader>
-//           <IonToolbar>
-//             <IonTitle className="header-title">Biblioteca</IonTitle>
-//           </IonToolbar>
-//         </IonHeader>
-  
-        <IonContent fullscreen>
-          <h2>Bem-vindo à Biblioteca de Pagode</h2>
-        </IonContent>
-  
-        <IonFooter>
-          <div className="footer">
-            <div className="footer-item" onClick={() => history.push('/home')}>
-              <IonIcon icon={homeOutline} />
-              <p>Início</p>
-            </div>
-            <div className="footer-item" onClick={() => history.push('/biblioteca')}>
-              <IonIcon icon={libraryOutline} />
-              <p>Biblioteca</p>
-            </div>
-          </div>
-        </IonFooter>
-      </IonPage>
-    );
-  };
-  
-  export default Biblioteca;
-  
+import React from 'react';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/react';
+import './Biblioteca.css';
+
+const Biblioteca: React.FC = () => {
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Biblioteca</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+
+      <IonContent fullscreen className="biblioteca-content">
+        <h2 className="biblioteca-title">Bem-vindo à sua Biblioteca de Pagode</h2>
+
+        {}
+        <div className="cd-list">
+          <IonButton expand="full" color="primary" className="cd-item">
+            Pixote 15 Anos
+          </IonButton>
+          <IonButton expand="full" color="primary" className="cd-item">
+            Exaltasamba ao Vivo
+          </IonButton>
+          <IonButton expand="full" color="primary" className="cd-item">
+            Revelação 2003
+          </IonButton>
+          <IonButton expand="full" color="primary" className="cd-item">
+            Sensação ao Vivo
+          </IonButton>
+          <IonButton expand="full" color="primary" className="cd-item">
+            Raça Negra ao Vivo
+          </IonButton>
+        </div>
+      </IonContent>
+    </IonPage>
+  );
+};
+
+export default Biblioteca;

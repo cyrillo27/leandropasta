@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
-import {
-  IonContent,
-  IonFooter,
-  IonHeader,
-  IonIcon,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonIcon } from '@ionic/react';
 import { homeOutline, libraryOutline } from 'ionicons/icons';
-import { useHistory } from 'react-router-dom'; 
-import './Home.css';
+import { useHistory } from 'react-router-dom';
+import './Onboard.css';
 
 const Home: React.FC = () => {
+  const [selectedCD, setSelectedCD] = useState<string>(''); 
   const history = useHistory();
-  const [selectedCd, setSelectedCd] = useState('');
+
+  // Função para lidar com a mudança do dropdown
+  const handleCDChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const cdValue = e.target.value;
+    setSelectedCD(cdValue);
+    alert(`Você selecionou o CD: ${cdValue}`); 
+  };
+
+  // Função para navegação no footer
+  const navigateTo = (route: string) => {
+    history.push(route); // Navega para a página passada como parâmetro
+  };
 
   return (
     <IonPage>
@@ -25,44 +29,36 @@ const Home: React.FC = () => {
       </IonHeader>
 
       <IonContent fullscreen>
+        <div className="background"></div>
         <div className="dropdown-container">
-          <label htmlFor="pagode-options" className="dropdown-label">
-            CDs de Pagode
-          </label>
-          <select
-            id="pagode-options"
-            className="dropdown"
-            value={selectedCd}
-            onChange={(e) => setSelectedCd(e.target.value)}
+          <label htmlFor="pagode-options" className="dropdown-label">CDs de Pagode</label>
+          <select 
+            id="pagode-options" 
+            className="dropdown" 
+            value={selectedCD} 
+            onChange={handleCDChange}
           >
             <option value="">Selecione um CD</option>
             <option value="pixote">Pixote 15 Anos</option>
             <option value="exaltasamba">Exaltasamba ao Vivo</option>
             <option value="revelacao">Revelação 2003</option>
             <option value="sensacao">Sensação ao Vivo</option>
+            <option value="raca-negra">Raça Negra ao Vivo</option>
           </select>
-          {selectedCd && <p>Você selecionou: {selectedCd}</p>}
         </div>
       </IonContent>
 
+      {/* Footer com navegação */}
       <IonFooter>
         <div className="footer">
-          <button
-            className="footer-item"
-            onClick={() => history.push('/home')}
-            aria-label="Ir para Início"
-          >
+          <div className="footer-item" onClick={() => navigateTo('/')}>
             <IonIcon icon={homeOutline} />
             <p>Início</p>
-          </button>
-          <button
-            className="footer-item"
-            onClick={() => history.push('/biblioteca')}
-            aria-label="Ir para Biblioteca"
-          >
+          </div>
+          <div className="footer-item" onClick={() => navigateTo('/biblioteca')}>
             <IonIcon icon={libraryOutline} />
             <p>Biblioteca</p>
-          </button>
+          </div>
         </div>
       </IonFooter>
     </IonPage>

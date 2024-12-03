@@ -1,27 +1,16 @@
-import React from 'react';
-import './App.css'; 
-import { IonApp, IonRouterOutlet } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { Route, Redirect } from 'react-router-dom';
-import Home from './pages/Home'; 
-import Biblioteca from './pages/Biblioteca'; 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import Biblioteca from './pages/Biblioteca';
+import Login from './pages/login';
 
-const App: React.FC = () => {
-  return (
-    <IonApp>
-      <IonReactRouter>
-        <IonRouterOutlet>
-          {}
-          <Route exact path="/" render={() => <Redirect to="/home" />} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/biblioteca" component={Biblioteca} />
-          
-          {}
-          <Route render={() => <h1>Página não encontrada</h1>} />
-        </IonRouterOutlet>
-      </IonReactRouter>
-    </IonApp>
-  );
-};
+const App: React.FC = () => (
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/biblioteca" component={Biblioteca} />
+      <Route path="/login" component={Login} />
+    </Switch>
+  </Router>
+);
 
 export default App;

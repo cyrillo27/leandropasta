@@ -1,15 +1,66 @@
+/* Biblioteca.css */
+.biblioteca-content {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh; /* Garante que ocupe toda a altura da tela */
+  box-sizing: border-box;  /* Garante que o padding não afete a altura */
+}
 
-.biblioteca-container {
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  
+.biblioteca-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.cd-list {
+  width: 100%;
+  max-width: 600px; /* Aumentei um pouco o max-width para telas grandes */
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.cd-item {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cd-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cd-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
   .biblioteca-title {
-    font-size: 24px;
-    color: #333;
+    font-size: 20px;
   }
-  
-  .biblioteca-item {
-    margin: 10px 0;
+
+  .cd-list {
+    max-width: 100%;
+    padding: 0 15px;
   }
-  
+
+  .cd-item {
+    font-size: 0.9rem;
+  }
+}
+
